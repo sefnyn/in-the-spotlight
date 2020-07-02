@@ -12,12 +12,12 @@ services:
     volumes:
       - .:/myapp
     ports:
-       - "8000:3000"
+       - "3000:3000"
     depends_on:
       - db
-#  solr:
-#    image: cbeer/docker-solr-cloud
-#    ports: 
-#      - "8983"
-#    volumes:
-#      - solr-configsets:/opt/solr/server/solr/configsets
+  solr:
+    image: cbeer/docker-solr-cloud
+    ports: 
+      - "8983"
+    volumes:
+      - solr-configsets:/opt/solr/server/solr/configsets
